@@ -1,5 +1,5 @@
 import { Component, ChangeDetectionStrategy, Input } from '@angular/core';
-import docs from '../../../api-docs';
+// import docs from '../../../api-docs';
 import { ClassDesc, MethodDesc, signature } from './api-docs.model';
 import { AnalyticsService } from '../../services/analytics.service';
 import { RouterLink } from '@angular/router';
@@ -35,7 +35,7 @@ export class NgbdApiDocsClass {
 	constructor(private _analytics: AnalyticsService) {}
 
 	@Input() set type(typeName: string) {
-		this.apiDocs = docs[typeName];
+		// this.apiDocs = docs[typeName];
 	}
 
 	methodSignature(method: MethodDesc): string {

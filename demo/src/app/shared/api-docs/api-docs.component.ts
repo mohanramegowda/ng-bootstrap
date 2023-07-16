@@ -1,5 +1,5 @@
 import { Component, ChangeDetectionStrategy, Input } from '@angular/core';
-import docs from '../../../api-docs';
+// import docs from '../../../api-docs';
 import { PropertyDesc, DirectiveDesc, InputDesc, MethodDesc, ClassDesc, signature } from './api-docs.model';
 import { AnalyticsService } from '../../services/analytics.service';
 import { RouterLink } from '@angular/router';
@@ -45,9 +45,9 @@ export class NgbdApiDocs {
 	constructor(private _analytics: AnalyticsService) {}
 
 	@Input() set directive(directiveName: string) {
-		this.apiDocs = docs[directiveName];
+		// this.apiDocs = docs[directiveName];
 		this.configServiceName = `${directiveName}Config`;
-		const configApiDocs = docs[this.configServiceName];
+		let configApiDocs; // = docs[this.configServiceName];
 		this._configProperties = {};
 		if (configApiDocs) {
 			this.apiDocs.inputs.forEach(
